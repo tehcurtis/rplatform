@@ -1,0 +1,13 @@
+CHANGELOG
+HISTORY.txt
+Rakefile
+README.txt
+lib/facebook_desktop_session.rb
+lib/facebook_session.rb
+lib/facebook_web_session.rb
+lib/facepricot.rb
+lib/rfacebook.rb
+test/facebook_desktop_session_test.rb
+test/facebook_session_test_methods.rb
+test/facebook_web_session_test.rb
+test/test_helper.rb
