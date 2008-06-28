@@ -4,7 +4,7 @@ $:.unshift(File.dirname(__FILE__) + "/lib")
 require 'rplatform'
 
 Hoe.new('RPlatform', RPlatform::VERSION) do |p|
-  p.name = "rPlatform"
+  p.name = "rplatform"
   p.author = "Curtis Edmond"
   p.description = "ruby interface for Facebook's Platform API."
   p.email = 'curtis.edmond@gmail.com'
