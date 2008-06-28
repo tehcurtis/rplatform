@@ -27,9 +27,9 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-require "facebook_session"
+require "rplatform_session"
 
-module RFacebook
+module RPlatform
 
   class FacebookDesktopSession < FacebookSession
 
@@ -43,6 +43,8 @@ module RFacebook
     # quiet::           boolean, set to true if you don't want errors to be thrown (defaults to false)
     def initialize(api_key, api_secret, quiet = false)
       super(api_key, api_secret, quiet)
+      @session_secret ||= nil
+      @session_key ||= nil
       result = remote_call("auth.createToken", {})
       @desktop_auth_token = result.at("auth_createToken_response")
       @desktop_auth_token = @desktop_auth_token.nil? ? nil : @desktop_auth_token.inner_html.to_s

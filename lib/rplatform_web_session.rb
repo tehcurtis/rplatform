@@ -27,9 +27,9 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-require "facebook_session"
+require "rplatform_session"
 
-module RFacebook
+module RPlatform
 
   class FacebookWebSession < FacebookSession
         
@@ -107,6 +107,7 @@ module RFacebook
   
     # returns true if this session is completely ready to be used and make API calls
     def ready?
+      @session_key ||= nil
       return (@session_key != nil and !expired?)
     end
   

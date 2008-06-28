@@ -1,3 +1,6 @@
+== 0.0.2
+* got the base tests passing.
+
 == 0.0.1
 * initial release of rPlatform gem. Basically bringing in rFacebook with some hacks to 
 support other networks (like Bebo in this case). 

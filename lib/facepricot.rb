@@ -33,7 +33,7 @@
 
 require "hpricot"
 
-module RFacebook
+module RPlatform
 
   module FacepricotChaining
     

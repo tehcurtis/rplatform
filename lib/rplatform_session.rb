@@ -32,7 +32,7 @@ require "net/https"
 require "cgi"
 require "facepricot"
 
-module RFacebook
+module RPlatform
 
   # TODO: better handling of session expiration
   
@@ -122,6 +122,9 @@ module RFacebook
       @last_error_message = nil # DEPRECATED
       @last_error_code = nil # DEPRECATED
       @expired = false
+      
+      # set the logger
+      @logger ||= nil
     end
   
     # Template method. Returns true when the session is definitely prepared to make API calls.
@@ -154,6 +157,7 @@ module RFacebook
       
     protected
     def get_network_param(name)
+      network ||= 'facebook'
       HOST_CONSTANTS[network][name]
     end
     
@@ -200,7 +204,8 @@ module RFacebook
       params = (params || {}).dup
       params[:method] = "facebook.#{method}"
       params[:api_key] = @api_key
-      params[:v] = API_VERSION
+      params[:v] = self.get_network_param(:api_version)
+
       # params[:format] ||= @response_format # TODO: consider JSON capability
     
       # non-auth methods get special consideration
@@ -313,6 +318,8 @@ module RFacebook
     def log_info(message) # :nodoc:
       @logger.info(message) if @logger
     end
+    
+
   
     ################################################################################################
     ################################################################################################

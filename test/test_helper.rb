@@ -1,13 +1,14 @@
 require 'test/unit'
 require 'rubygems'
 require 'mocha'
-require 'rfacebook'
+
+require 'rplatform'
 
 
 
 
-module RFacebook
-  module Dummy
+module RPlatform
+  module Dummy 
   
     API_KEY = "dummykey123"
     API_SECRET = "dummysecret456"

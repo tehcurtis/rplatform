@@ -6,7 +6,7 @@ This project was continued on from rfacebook. For now, consult the rfacebook hom
 
 ============================== LICENSE ==============================
 
-Copyright (c) 2007, Curtis Edmond (www.okwithfailure.com)
+Copyright (c) 2008, Curtis Edmond (www.okwithfailure.com)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
